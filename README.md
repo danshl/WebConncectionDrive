@@ -19,7 +19,15 @@ $ pip install googleapiclient.http , googleapiclient.discovery
 $ pip install google.oauth2
 ```
 
-Links
+Web hosting service
+------
+(for debugging)
+  Localhost
+(Live)
+  PythonAnywhere 
+  AWS
+  Heroku
+  Links
 ------
 - **Documentation Flask:** https://flask.palletsprojects.com/
 - **API Google Sheets:** https://developers.google.com/sheets/api/guides/concepts
