@@ -4,7 +4,7 @@ My project is a website that requires users to establish a connection with a pas
 Installing
 ------
 Install and update using pip: 
-`print("Hello, world!")`
+`$ pip install -U Flask`
 
 Links
 ------
