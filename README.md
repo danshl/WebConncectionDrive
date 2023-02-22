@@ -21,12 +21,11 @@ $ pip install google.oauth2
 
 Web hosting service
 ------
-- (for debugging)
-- Localhost
-- (Live)
+- Localhost (for debugging)
 - PythonAnywhere 
 - AWS
 - Heroku
+
 Links
 ------
 - **Documentation Flask:** https://flask.palletsprojects.com/
