@@ -1,5 +1,5 @@
 # WebConncectionDrive
-In my project I created a website that allow users can submit personal files, which are saved to a designated drive of their choice.  
+A website that allow users can submit personal files, which are saved to a designated drive of their choice.  
 It's requires users to establish a connection by using a shared password and uses cookies to separate user information for privacy and security.
 
 
