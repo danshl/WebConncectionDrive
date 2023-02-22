@@ -1,9 +1,9 @@
-# WebConncectionDrive
-Installing
+# WebConncectionDrive 
+
+Introduction
 ------
 A website that allow users can submit personal files, which are saved to a designated drive of their choice.  
 It's requires users to establish a connection by using a shared password and uses cookies to separate user information for privacy and security.
-
 
 
 Installing
