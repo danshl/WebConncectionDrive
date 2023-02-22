@@ -6,6 +6,11 @@ Installing
 Install and update using pip: 
 
 ```$ pip install -U Flask```
+```ruby
+require 'redcarpet'
+markdown = Redcarpet.new("Hello World!")
+puts markdown.to_html
+```
 
 Links
 ------
