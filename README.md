@@ -5,7 +5,13 @@ Installing
 ------
 Install and update using pip: 
 ```
-$ pip install -U Flask
+$ pip install Flask
+```
+```
+$ pip install googleapiclient.http , googleapiclient.discovery
+```
+```
+$ pip install google.oauth2
 ```
 
 Links
