@@ -22,7 +22,7 @@ $ pip install google.oauth2
 Web hosting service
 ------
 (for debugging)
-  Localhost
+Localhost
 (Live)
   PythonAnywhere 
   AWS
