@@ -5,14 +5,14 @@ from googleapiclient.discovery import build
 #Read from the Googlesheet data - in this case, the counter row;
 def get_data():
     #       ---Complete your json file path---
-    credentials_path = "C://Users//danie//H//ans.json"
+    credentials_path = "-----"
     os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = credentials_path
 
     #Authenticate and construct the service object;
     credentials, project = google.auth.default(scopes=['https://www.googleapis.com/auth/spreadsheets'])
 
     #        ---Set the spreadsheet ID and range---
-    SPREADSHEET_ID = "15JFqq9rGmx0coQqHFReH1vDKHTo1Pq_NqtpYRaKbc4A"
+    SPREADSHEET_ID = "------"
     RANGE_NAME = 'Sheet1!B2'
 
     # Build the service client and call the Sheets API to get the data;
@@ -26,13 +26,13 @@ def get_data():
 #Fill in the fields in the google sheet
 def update(fname,lname,id,val1,val2,val3):
     #       ---Complete your json file path---
-    credentials_path = "C://Users//danie//H//ans.json"
+    credentials_path = "-------"
     os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = credentials_path
     # Authenticate and construct the service object;
     credentials, project = google.auth.default(scopes=['https://www.googleapis.com/auth/spreadsheets'])
     service = build('sheets', 'v4', credentials=credentials)
     #        ---Set the spreadsheet ID and range---
-    spreadsheet_id = "15JFqq9rGmx0coQqHFReH1vDKHTo1Pq_NqtpYRaKbc4A"
+    spreadsheet_id = "------"
     val = get_data()
     range_name = 'Sheet1!B' + str(val) + ':H' + str(val);
 
