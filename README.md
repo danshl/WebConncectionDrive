@@ -1,5 +1,7 @@
 # WebConncectionDrive
-My project is a website that requires users to establish a connection with a password that is shared among all users. By using cookies, the website separates user information to ensure privacy and security. Once the user is connected, they can submit personal files, which our website receives and stores in the designated drive - in this case Google drive and update the control table - in this case Google sheets. This way, our website serves as a safe and efficient storage platform for our users' personal files.
+A website that requires users to establish a connection with a password that is shared among all users. By using cookies, the website separates user information to ensure privacy and security.
+Once the user is connected, they can submit personal files, which our website receives and stores in the designated drive - in this case Google drive and update the control table - in this case Google sheets. 
+This way, our website serves as a safe and efficient storage platform for our users' personal files.
 
 Installing
 ------
