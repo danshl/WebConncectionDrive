@@ -21,8 +21,8 @@ $ pip install google.oauth2
 
 Links
 ------
-- **Documentation Google Drive:** https://flask.palletsprojects.com/
-- **Documentation Google Sheets:** https://developers.google.com/sheets/api/guides/concepts
+- **Documentation Flask:** https://flask.palletsprojects.com/
+- **API Google Sheets:** https://developers.google.com/sheets/api/guides/concepts
 - **API Google Drive:** https://developers.google.com/drive/api/guides/about-files
 - **Source Code:** https://github.com/danshl/WebConncectionDrive
 
