@@ -14,21 +14,22 @@ app = Flask(__name__)
 app.secret_key = ''.join(random.choices(string.ascii_letters + string.digits, k=30))
 
 ##    ---Complete your folder id---;
-DRIVE_FOLDER_1 = '1AMDJg17MbhfVeQ3do0ApRBHRz3IsUSIr'
-DRIVE_FOLDER_2 = '1J_mXkT_GnYjeK9qwL_hmRU1yghUwkICF'
-DRIVE_FOLDER_3 = '1Yy7Ur84uwx1lEkP78bhb2xhv-GL5ZE7e'
+DRIVE_FOLDER_1 = '----'
+DRIVE_FOLDER_2 = '----'
+DRIVE_FOLDER_3 = '----'
 
-username_val ="Heroes"
-password_val = "Aa123456"
+##    ---Complete your username and password---;
+username_val ="-----"
+password_val = "-----"
 #Login page
 @app.route('/')
 def main():
-    return flask.send_from_directory("", "LoginPage.html")
+    return flask.send_from_directory("HtmlPages", "LoginPage.html")
 
 @app.route('/Disconnected')
 def Disconnected():
     session['authenticated'] = False
-    return flask.send_from_directory("", "LoginPage.html")
+    return flask.send_from_directory("HtmlPages", "LoginPage.html")
 
 #Get response and check details
 @app.route('/Check', methods=['POST'])
@@ -46,21 +47,21 @@ def check():
 @app.route('/Submit_Files')
 def Submit_files():
     if session.get('authenticated'):
-        return flask.send_from_directory("", "DataPage.html")
+        return flask.send_from_directory("HtmlPages", "DataPage.html")
     else:
         return 'You are not authorized to access this page'
 
 #return 'Done' html page;
 @app.route('/Done')    
 def Done():
-        return flask.send_from_directory("", "Done.html")
+        return flask.send_from_directory("HtmlPages", "Done.html")
 
 #Upload the images to your google drive
 @app.route('/upload-image', methods=['POST'])    
 def upload_image():
     try:
         #       ---Complete your json file path---
-        creds = service_account.Credentials.from_service_account_file('C://Users//danie//H//ans.json')
+        creds = service_account.Credentials.from_service_account_file('---------')
         IDs = [DRIVE_FOLDER_1, DRIVE_FOLDER_2,DRIVE_FOLDER_3]
         unique_name = request.form.get('fname') + "_" + request.form.get('lname') + "_" + request.form.get('idname')
         arr = ['-','-','-']
@@ -86,4 +87,4 @@ def upload_image():
 
 
 if __name__ == '__main__':
-    app.run(port=5010)
+    app.run()
