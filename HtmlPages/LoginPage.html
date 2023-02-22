@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        /* styles for regular screens */
+        zoom: 75%;
+        font-family: "Lato", Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.8;
+      }
+
+      @media screen and (max-width: 1000px) {
+        body {
+        /* styles for smaller screens */
+          position: absolute;
+          top: 200px;
+          left: -540px;
+          background-position-x: 220px;
+          background-position-y: 130px;
+          background-size: 800px;
+          background-color: #f8f9fd;
+        }
+        #check_login {
+          background-color: white;
+        }
+      }
+        /* styles for 'submit' button */
+      input[type="submit"] {
+        size: 10px;
+        color: white;
+        width: 80%;
+        height: 10%;
+        background-color: #1899fd;
+        border: none;
+        border-radius: 5px;
+        font-size: 20px;
+      }
+        /* styles the Box place*/
+      .BoxData {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: #f8f9fd;
+        background-size: 400px;
+        background-repeat: no-repeat;
+        opacity: 0.8;
+        z-index: -1;
+      }
+        /* styles the box view*/
+      #check_login {
+        background-color: white;
+        border: 1px solid white;
+        width: 500px;
+        height: 750px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.4);
+        border-radius: 10px;
+        position: absolute;
+        left: 900px;
+        top: 210px;
+        opacity: 1.0;
+      }
+        /* styles and place the username field*/
+      #username {
+        size: 10px;
+        width: 80%;
+        height: 8%;
+        border-radius: 5px;
+        font-size: 20px;
+        border-width: 0.2px;
+        border-color: #d5d9dd;
+      }
+        /* styles and place the password field*/
+      #password {
+        size: 10px;
+        width: 80%;
+        height: 8%;
+        border-radius: 5px;
+        font-size: 20px;
+        border-width: 0.2px;
+        border-color: #d5d9dd;
+      }
+        /* styles and place the error frame*/
+      #error-iframe {
+        position: absolute;
+        font-size: 15px;
+        top: 690px;
+      }
+    </style>
+    <title></title>
+  </head>
+   
+  <body>
+    <!--The Box data - field, vars and types -->
+    <div class="BoxData">
+      <form id="check_login" method="POST" action="/login" name="Login_page">
+        <h1 id="error-iframe" style="display:none;">Your password or/and user are incorrect</h1>
+        <img id="Design_icon" src="https://www.mccombproperty.com/wp-content/uploads/2015/06/staff-icon-150x150.png" alt="Image Description">
+        <label for="username"></label><br><br>
+        <h2 style="position:absolute; top:230px; left:213px; font-size:35px;">Sign In</h2><br><br><br><br>
+        <input type="text" id="username" name="username" placeholder="Username"><br>
+        <label for="password"></label>
+        <input type="password" id="password" name="password" placeholder="Password"><br><br>
+        <input type="submit" value="Login" style="cursor:pointer;">
+      </form>
+    </div>
+  
+    <script>
+        //Listening to 'submit' button
+      const form = document.getElementById('check_login');
+      form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        //Create a Formdata object;
+        const formData = new FormData();
+        const username = document.querySelector('input[name="username"]');
+        const Password = document.querySelector('input[name="password"]');
+        formData.append('username', username.value);
+        formData.append('password', Password.value);
+        //Send to the server the data and check the response;
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', '/Check', true);
+        xhr.onload = function() {
+          if (xhr.responseText === "True") {
+            window.location = '/Submit_Files';
+          } else {
+            var errorIframe = document.getElementById("error-iframe");
+            errorIframe.style.display = "block";
+          }
+        };
+        xhr.send(formData);
+      });
+    </script>
+  </body>
+  

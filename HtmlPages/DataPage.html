@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /*Headline in 'myBox'*/
+    h1{
+      position: relative;
+      left: 270px;
+      top: 0px;
+      font-family: Arial, sans-serif;
+    }
+    body{
+      background-image: url('https://www.igul.org.il/wp-content/uploads/2020/03/%D7%9C%D7%95%D7%92%D7%95-700x278.png');
+      background-repeat: no-repeat;
+      background-size: 400px;
+      position: absolute;
+      background-position-x: 750px;
+      background-position-y: 30px;
+      zoom:90%;
+    }
+    @media screen and (max-width: 1000px) {
+      body {
+        /* styles for smaller screens */
+        position: absolute;
+        top: 250px; 
+        left: -470px;
+        background-position-x: 260px;
+        background-position-y: 130px;
+        background-size: 600px;
+      }
+    }
+    /*Bottom submit*/
+    input[type=submit] {
+      background-color: #163057;
+      border: none;
+      color: white;
+      padding: 16px 32px;
+      text-decoration: none;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 30px;
+      position: relative;
+      left: 1270px;
+      bottom: -730px;
+    }
+    input[type='submit']:hover {
+      background-color: lightblue;
+      color: #163057;
+      border: 3px solid black;
+      animation: shake 0.5s;
+    }
+    /*Design myBox*/
+    .myBox {
+      border-radius: 30px;
+      border: 2px solid #163057;
+      background-color: lightblue;
+      position: absolute;
+      left: 500px;
+      top: 300px;
+      width: 900px;
+      height: 500px;
+      font-size: 20px;
+      size: 80px;
+      font-family: Arial, sans-serif;
+    }
+    /*Design Guidelines*/
+    #Guidelines {
+      position: absolute;
+      left: -30px;
+      top: 100px;
+      width: 900px;
+      height: 500px;
+      font-family: Arial, sans-serif;
+    }
+    /*Design waitMessage view*/
+    #waitMessage {
+      background-color: green;
+      font-family: Arial, sans-serif;
+      border: none;
+      color: white;
+      padding: 16px 32px;
+      text-decoration: none;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 30px;
+      position: relative;
+      left: 1300px;
+      bottom: -730px;
+      font-size: 18px;
+    }
+    /*Design input file bottom*/
+    input[type=file] {
+      font-family: Arial, sans-serif;
+      border: none;
+      color: white;
+      background-color: #163057;
+      border-radius: 12px;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+      width: 210px;
+    }
+    /*Design input text bottom*/
+    input[type=text] {
+      font-family: Arial, sans-serif;
+      border-radius: 4px;
+      font-size: 16px;
+      font-weight: bold;
+      width: 170px;
+      border-width: 3px;
+      border-color: #163057;
+    }
+    /*Animation to button*/
+    @keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(5px);
+    }
+    50% {
+        transform: translateX(0);
+    }
+    75% {
+        transform: translateX(-5px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+    }
+ 
+      .line{
+        background-color: #163057;
+        height: 10px;
+        width: 2200px;
+        position: absolute;
+        top: 190px;
+        left: -10px;
+      }
+      #myLogout{
+     background-color: lightblue;
+      color: #163057;
+      padding: 16px 32px;
+      text-decoration: none;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 30px;
+      position: relative;
+      left: -80px;
+      bottom: -120px;
+      border-color: #163057;
+      border-width: 3px;
+      font: bold;
+      }
+ 
+    </style>
+    <script>
+        // window.addEventListener("wheel", function(event) {
+        //     if (event.ctrlKey) {
+        //     event.preventDefault();
+        //     }
+        // }, { passive: false });
+        // </script>
+    <title>לוחמים ללא גבולות - מילוי טפסים</title>
+    <link rel="icon" type="image/x-icon" href="https://www.igul.org.il/wp-content/uploads/2020/03/%D7%9C%D7%95%D7%92%D7%95-700x278.png">
+  </head>
+
+  <div class="line"></div>
+  <body>
+    <!--All the fields need to fill in -->
+    <form id="image-upload-form">
+      <div class="myBox">
+        <h1 style="font-size: 30px;">מילוי והעלאת קבצים אישיים</h1>
+          <div class="First_section" style="position: absolute; left:20px; top: 180px">
+          <label for="fname">First name:</label>
+          <input type="text" id="fname" name="fname" size="20px" ><br>
+        </div>
+
+        <div class="Second_section" style="position: absolute; left:20px; top: 220px">
+          <label for="lname">Last name:</label>
+          <input type="text" id="lname" name="lname" size="20px"> <br>
+        </div>
+
+        <div class="Third_section" style="position: absolute; left:20px; top: 260px">
+          <label for="idname">ID number:</label>
+          <input type="text" id="idname" name="idname"> <br>
+        </div>
+
+        <div class="ID_section" style="position: absolute; left:20px; top: 300px" >
+          <br>
+          <label for="fname">Please enter your ID:</label>
+          <input type="file" name="image-file-1"><br>
+        </div>
+
+        <div class="Passport_section" style="position: absolute; left:20px; top: 340px">
+          <br>
+          <label for="fname">Please enter your Passport:</label>
+          <input type="file" name="image-file-2" > <br>
+        </div>
+
+        <div class="Insurance_section" style="position: absolute; left:20px; top: 380px">
+          <br>
+          <label for="fname">Please enter your insurance:</label>
+          <input type="file" name="image-file-3"> <br>
+        </div>
+
+      </div>
+      <!--Button submit and guidelines -->
+      <input id="myButton" type="submit" value="Upload">
+      <button id="myLogout" onclick="logout()">Logout</button>
+      <div id="waitMessage" style="display: none; " >Please wait...</div>
+        <form name="Guidelines">
+          <p dir="rtl" style="position: absolute;left: 780px; top: 360px; font-family: Arial, sans-serif; font-size: 18px; width: 600px;"><label dir="rtl" for="w3review">
+          <b>  הנחיות:<br>
+            א. יש למלא את כל השדות באנגלית בלבד.<br>
+            ב. לאחר לחיצה על הגש, יש להמתין כ-10 שניות לקבלת אישור כי הטפסים התקבלו בהצלחה.    </b>
+          </label></p>
+          <br>
+        </form>
+      </div>
+    </form>
+
+    <script>
+        logout_state = false
+        function logout() {
+            window.location.href = "/Disconnected"; // redirect to login page
+            logout_state = true
+        }
+
+        function buttonClick() {
+            //Disapper the button after the pressing;
+          var myButton = document.getElementById("myButton");
+          var waitMessage = document.getElementById("waitMessage");
+          myButton.style.display = "none";
+          waitMessage.style.display = "block";
+        }
+    </script>
+ 
+    
+      
+        <div id="status-message"></div>
+    <script>
+        const form = document.getElementById('image-upload-form');
+        const statusMessage = document.getElementById('status-message');
+      
+        form.addEventListener('submit', (event) => {
+          event.preventDefault();
+          // Check if required fields are filled out
+          const idname = document.querySelector('input[name="idname"]');
+          const lname = document.querySelector('input[name="lname"]');
+          const fname = document.querySelector('input[name="fname"]');
+          if ((!idname.value || !lname.value || !fname.value) && !logout_state) {
+            alert('Please fill out all the details');
+            return;
+          }
+          if (logout_state) return  
+          buttonClick();
+          // If all required fields are filled out, proceed with form submission
+          const formData = new FormData();
+          const fileInput1 = document.querySelector('input[name="image-file-1"]');
+          const fileInput2 = document.querySelector('input[name="image-file-2"]');
+          const fileInput3 = document.querySelector('input[name="image-file-3"]');
+          formData.append('image-file-1', fileInput1.files[0]);
+          formData.append('image-file-2', fileInput2.files[0]);
+          formData.append('image-file-3', fileInput3.files[0]);
+          formData.append('idname', idname.value);
+          formData.append('lname', lname.value);
+          formData.append('fname', fname.value);
+          //Send to the server the data and check the response;
+          const xhr = new XMLHttpRequest();
+          xhr.open('POST', '/upload-image', true);
+          xhr.onload = function() {
+            if (xhr.status === 200) {
+              redirectToDonePage();
+            } else {
+              statusMessage.textContent = 'Error uploading images. Please try again.';
+            }
+          };
+      
+          xhr.send(formData);
+        });
+        
+        function redirectToDonePage() {
+          window.location = '/Done';
+        }
+      </script>
+      </body>
+      </html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      /* Headline in 'myBox' */
+      h1 {
+        position: relative;
+        left: 270px;
+        top: 00px;
+        font-family: Arial, sans-serif;
+      }
+
+      /* Answer in 'myBox' */
+      h2 {
+        position: relative;
+        left: -210px;
+        top: 160px;
+        font-family: Arial, sans-serif;
+        font-size: 40px;
+        color: #163057;
+      }
+
+      body {
+        /* styles for regular screens */
+        background-image: url('https://www.igul.org.il/wp-content/uploads/2020/03/%D7%9C%D7%95%D7%92%D7%95-700x278.png');
+        background-repeat: no-repeat;
+        background-size: 400px;
+        position: absolute;
+        background-position-x: 850px;
+        background-position-y: 30px;
+        zoom: 80%;
+      }
+
+      @media screen and (max-width: 1000px) {
+        body {
+          /* styles for smaller screens */
+          position: absolute;
+          top: 200px; /* adjust this value as needed to move the body element to the correct position */
+          left: -570px;
+          background-position-x: 200px;
+          background-position-y: 130px;
+          background-size: 600px;
+        }
+      }
+      /* styles the answer box*/
+      .myBox {
+        border-radius: 30px;
+        border: 2px solid #163057;
+        background-color: lightblue;
+        position: absolute;
+        left: 600px;
+        top: 300px;
+        width: 900px;
+        height: 500px;
+      }
+    </style>
+
+    <title>לוחמים ללא גבולות - מילוי טפסים</title>
+    <link rel="icon" type="image/x-icon" href="https://www.igul.org.il/wp-content/uploads/2020/03/%D7%9C%D7%95%D7%92%D7%95-700x278.png">
+  </head>
+
+  <body>
+    <!-- myBox response -->
+    <form id="image-upload-form">
+      <div class="myBox">
+        <h1>מילוי והעלאת קבצים אישיים</h1>
+        <h2 dir="rtl">הקבצים שלך התקבלו בהצלחה! </h2>
+      </div>
+    </form>
+  </body>
+</html>
