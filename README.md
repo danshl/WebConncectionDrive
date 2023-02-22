@@ -4,12 +4,8 @@ My project is a website that requires users to establish a connection with a pas
 Installing
 ------
 Install and update using pip: 
-
-```$ pip install -U Flask```
-```ruby
-require 'redcarpet'
-markdown = Redcarpet.new("Hello World!")
-puts markdown.to_html
+```
+$ pip install -U Flask
 ```
 
 Links
